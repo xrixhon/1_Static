@@ -7,6 +7,19 @@ model = pyo.ConcreteModel()
 
 # Define model parameters
 model.H2inNH3 = pyo.Param(initialize=0.18)
+model.H2inCH4 = pyo.Param(initialize=0.25)
+model.CO2inCH4 = pyo.Param(initialize=2.75)
+model.volumeBoat = pyo.Param(initialize=200000.)
+model.densityNH3 = pyo.Param(initialize=0.6)
+model.densityCH4 = pyo.Param(initialize=0.5)
+model.LHV_NH3 = pyo.Param(initialize=18.5) #GJ/t
+model.LHV_CH4 = pyo.Param(initialize=50.) #GJ/t
+model.losses_NH3 = pyo.Param(initialize=0.4)
+model.losses_CH4 = pyo.Param(initialize=0.35) 
+model.maxBoats = pyo.Param(initialize=100.)
+model.maxEnergy = pyo.Param(initialize=140*1E6*3.6)
+model.maxCO2 = pyo.Param(initialize=14E6)
+
 
 
 
